@@ -1,14 +1,9 @@
 function createNav() {
-    let content = document.getElementById("content");
-
-    let nav = document.createElement("nav");
-    nav.classList.add("nav-bar");
-
-    let homeBtn = document.createElement("button");
+    const homeBtn = document.createElement("button");
     homeBtn.innerHTML = "HOME";
-    let menuBtn = document.createElement("button");
+    const menuBtn = document.createElement("button");
     menuBtn.innerHTML = "MENU";
-    let contactBtn = document.createElement("button");
+    const contactBtn = document.createElement("button");
     contactBtn.innerHTML = "CONTACT";
 
     homeBtn.classList.add("button-nav");
@@ -19,38 +14,39 @@ function createNav() {
     menuBtn.setAttribute("id","menu-btn");
     contactBtn.setAttribute("id","contact-btn");
 
+    const nav = document.querySelector(".nav-bar");
     nav.append(homeBtn);
     nav.append(menuBtn);
     nav.append(contactBtn);
-    content.append(nav);
 }
 
 function initLoadPage() {
-    let headline = document.createElement("H1");
-    let headlineText = document.createTextNode("Samurai Sushi Boat");
+    createNav();
+
+    const headline = document.createElement("H1");
+    const headlineText = document.createTextNode("Samurai Sushi Boat");
     headline.appendChild(headlineText);
     headline.setAttribute('id','headline');
 
-    let content = document.getElementById("content");
-    console.log(content);
+    const content = document.getElementById("content");
+    // console.log(content);
     content.appendChild(headline);
-    
-    createNav();
+    console.log("load");
 
-    let image = document.createElement("img");
+    const image = document.createElement("img");
     image.src = "https://storage.googleapis.com/wzukusers/user-12938003/images/57de0f7fcfba4d0Bx9j3/SUSHI1-edited-1.jpg";
     image.alt = "Combination Sashimi Plate";
 
-    let wonderWords = document.createElement("p");
+    const wonderWords = document.createElement("p");
 
-    let hello = document.createTextNode("Hello!");
-    let intro = document.createTextNode("We are a family-operated business, established in the \
+    const hello = document.createTextNode("Hello!");
+    const intro = document.createTextNode("We are a family-operated business, established in the \
         Grand Lake area of Oakland since 2005.");
-    let desc = document.createTextNode("We offer both water canal style sushi in custom-made boats, \
+    const desc = document.createTextNode("We offer both water canal style sushi in custom-made boats, \
         and table service for larger groups. Feel free to drop by for any occasion, whether it's a \
         quick bite to eat during the workday, a birthday celebration, watching the big game, or \
         relaxing and having a delicious meal.");
-    let ending = document.createTextNode("Love, Mama-San and Papa-San");
+    const ending = document.createTextNode("Love, Mama-San and Papa-San");
     wonderWords.append(hello);
     wonderWords.append(document.createElement("br"));
     wonderWords.append(intro);
@@ -64,6 +60,8 @@ function initLoadPage() {
     content.append(wonderWords);
 
     // Include Hours, Location
+
+    // setup the button to be disabled so user can't press it again to reload the page.
 }
 
 export default initLoadPage;
