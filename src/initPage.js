@@ -21,7 +21,7 @@ function createNav() {
 }
 
 function initLoadPage() {
-    createNav();
+    // createNav();
 
     const headline = document.createElement("H1");
     const headlineText = document.createTextNode("Samurai Sushi Boat");
@@ -64,4 +64,4 @@ function initLoadPage() {
     // setup the button to be disabled so user can't press it again to reload the page.
 }
 
-export default initLoadPage;
+export {createNav, initLoadPage};

@@ -1,4 +1,4 @@
-alert("on menu page!");
+// alert("on menu page!");
 
 function loadMenuPage() {
     alert("on menu page!");
