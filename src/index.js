@@ -45,9 +45,12 @@ function setupTabBrowsing() {
 setupTabBrowsing();
 
 // TODO: Add the disabling of clicked button and the restoring of the button once another is clicked
-// 2. Create the contact page
+// 2. Create the contact page with hours and location
 // 3. Create the menu page
 // 4. add the map to the contact page
 // 5. add the photo slider for the menu page
+// https://www.w3schools.com/w3css/w3css_slideshow.asp for photo slider 
 // 6. Add the hours to the contact page
+// 7. Separate the title from the content
+// https://www.sona-nyc.com/ use as an example to base off of
 

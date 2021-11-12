@@ -57,7 +57,7 @@ function initLoadPage() {
 
     
     content.appendChild(image);
-    content.append(wonderWords);
+    content.appendChild(wonderWords);
 
     // Include Hours, Location
 
