@@ -31,4 +31,6 @@ p {
     align-items: center;
     height: 240px; 
 }
-#hours {width: 100%; }
+#hours, #location { 
+    width: 100%; 
+}

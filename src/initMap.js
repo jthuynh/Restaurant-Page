@@ -17,7 +17,9 @@ function initMap() {
     // add a marker
     let marker = L.marker([37.81333290335504, -122.24659186840944]).addTo(mymap);
 
-    const popupText = "<b>Samurai Sushi Boat</b><br>3336 Grand Ave<br>Oakland, CA 94610";
+    // add a popup
+    const popupText = "<b>Samurai Sushi Boat</b><br>3336 Grand Ave<br>Oakland, CA 94610<br> \
+    <a href='https://tinyurl.com/samuraisushiboat' target='_blank' rel='noopener noreferrer'>View More</a>";
     marker.bindPopup(popupText).openPopup();
 }
 

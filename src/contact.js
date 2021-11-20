@@ -1,11 +1,19 @@
 import initMap from "./initMap";
 
-function loadHours() {
+function loadHoursLocationText() {
     const content = document.getElementById("content");
     console.log(content);
+    
 
     const header = document.createElement("h1");
     header.innerHTML = "HOURS & LOCATION";
+
+    const location = document.createElement("p");
+    location.id = "location";
+    location.classList.add("location");
+    location.innerHTML = "<a href='https://tinyurl.com/samuraisushiboat' target='_blank' \
+    rel='noopener noreferrer'><u>3336 Grand Ave<br>Oakland, CA 94610</u></a>";
+
     const hours = document.createElement("p");
     hours.id = "hours";
     hours.classList.add("hours");
@@ -32,6 +40,7 @@ function loadHours() {
     hours.append(sunHours);
     hours.append(document.createElement("br"));
 
+    header.appendChild(location);
     header.appendChild(hours);
     content.appendChild(header);
 }
@@ -45,8 +54,10 @@ function loadLocation() {
 }
 
 function loadContactPage() {
-    loadHours();
+    loadHoursLocationText();
     loadLocation();
+    // Add a contact form page if they have any questions?
+    // when pressing any other button than contact, need to delete the map
 }
 
 export default loadContactPage;
