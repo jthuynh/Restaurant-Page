@@ -25,4 +25,10 @@ p {
     width: 45%;
 }
 
-#map { height: 180px; }
+#map { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px; 
+}
+#hours {width: 100%; }

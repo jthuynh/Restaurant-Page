@@ -2,15 +2,24 @@
 
 function initMap() {
     // initialize the map
-    var map = L.map('map').setView([42.35, -71.08], 13);
+    let mymap = L.map('map').setView([37.81333290335504, -122.24659186840944], 50);
 
     // load a tile layer
-    L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
-    {
-        attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
-        maxZoom: 17,
-        minZoom: 9
-    }).addTo(map);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoiamViYnkiLCJhIjoiY2t3N2Z3ZDVqYnJwNTJucXBleWNyeWNqYyJ9.GI1Hmt8KZtzS9jNH2z6h2A'
+}).addTo(mymap);
+
+    // add a marker
+    let marker = L.marker([37.81333290335504, -122.24659186840944]).addTo(mymap);
+
+    const popupText = "<b>Samurai Sushi Boat</b><br>3336 Grand Ave<br>Oakland, CA 94610";
+    marker.bindPopup(popupText).openPopup();
 }
+
 
 export default initMap;
