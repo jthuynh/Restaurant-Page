@@ -1,3 +1,5 @@
+import initMap from "./initMap";
+
 function loadHours() {
     const content = document.getElementById("content");
     console.log(content);
@@ -35,10 +37,16 @@ function loadHours() {
 }
 
 function loadLocation() {
+    const body = document.querySelector("body");
+    const map = document.createElement("div");
+    map.id = "map";
+    body.appendChild(map);
+    initMap();
 }
 
 function loadContactPage() {
     loadHours();
+    loadLocation();
 }
 
 export default loadContactPage;

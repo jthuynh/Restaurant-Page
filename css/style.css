@@ -24,3 +24,5 @@ p {
     font-family: 'Klee One', Arial, Helvetica, sans-serif;
     width: 45%;
 }
+
+#map { height: 180px; }
