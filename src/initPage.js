@@ -21,7 +21,10 @@ function createNav() {
 }
 
 function initLoadPage() {
-    // createNav();
+    // // delete map if it exists
+    // if (document.getElementById("map")) {
+
+    // }
 
     const headline = document.createElement("H1");
     const headlineText = document.createTextNode("Samurai Sushi Boat");
@@ -58,10 +61,6 @@ function initLoadPage() {
     
     content.appendChild(image);
     content.appendChild(wonderWords);
-
-    // Include Hours, Location
-
-    // setup the button to be disabled so user can't press it again to reload the page.
 }
 
 export {createNav, initLoadPage};

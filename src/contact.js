@@ -56,8 +56,6 @@ function loadLocation() {
 function loadContactPage() {
     loadHoursLocationText();
     loadLocation();
-    // Add a contact form page if they have any questions?
-    // when pressing any other button than contact, need to delete the map
 }
 
 export default loadContactPage;
