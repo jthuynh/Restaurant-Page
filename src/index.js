@@ -5,9 +5,6 @@ import loadMenuPage from './menu';
 createNav();
 initLoadPage();
 
-// write tab switching logic
-// each tab has event listener that wipes out the current contents
-// runs correct tab module to populate it again
 function loadNewPage(e) {
     // wipe content
 
@@ -32,13 +29,10 @@ function loadNewPage(e) {
     console.log("content wiped. running correct tab...");
     if (e.target.id == "home-btn") {
         initLoadPage();
-        // console.log("loading home...");
     } else if (e.target.id == "menu-btn") {
         loadMenuPage();
-        // console.log("loading menu...");
     } else if (e.target.id == "contact-btn") {
         loadContactPage();
-        // console.log("loading contact-btn...");
     }
 }
 function setupTabBrowsing() {
@@ -60,5 +54,6 @@ setupTabBrowsing();
 // https://www.w3schools.com/w3css/w3css_slideshow.asp for photo slider 
 // 6. Add the hours to the contact page  -- DONE
 // 7. Separate the title from the content
+// 8. Rename the Contacts page to hours and location
 // https://www.sona-nyc.com/ use as an example to base off of
 

@@ -21,18 +21,12 @@ function createNav() {
 }
 
 function initLoadPage() {
-    // // delete map if it exists
-    // if (document.getElementById("map")) {
-
-    // }
-
     const headline = document.createElement("H1");
     const headlineText = document.createTextNode("Samurai Sushi Boat");
     headline.appendChild(headlineText);
     headline.setAttribute('id','headline');
 
     const content = document.getElementById("content");
-    // console.log(content);
     content.appendChild(headline);
     console.log("load");
 
@@ -57,7 +51,6 @@ function initLoadPage() {
     wonderWords.append(desc);
     wonderWords.append(document.createElement("br"));
     wonderWords.append(ending);
-
     
     content.appendChild(image);
     content.appendChild(wonderWords);
