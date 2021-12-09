@@ -14,12 +14,13 @@ function createSlideShowImgs() {
 
     const slidesContainer = document.createElement("div");
     slidesContainer.classList.add("slides-container");
+    slidesContainer.id = "slidesContainer";
 
     for (let i= 1; i < 14; i++) {
         var img = document.createElement("img");
         img.classList.add("mySlides");
         img.src = "../images/Menu/Image"+i+".jpeg";
-        img.setAttribute("style","height:50%");
+        img.setAttribute("style","width:100%;height:50%;");
         slidesContainer.appendChild(img);    
     }
 
@@ -31,7 +32,14 @@ function createSlideShowImgs() {
 }
 
 function plusDivs(n) {
+    // if (n.target.id == "leftBtn") {
+    //     console.log("left button pressed");
+    // }else if(n.target.id == 'rightBtn') {
+    //     console.log("right button pressed.");
+    // }
+    console.log("button pressed, ",slideIdx, n);
     showImg(slideIdx += n);
+    console.log(slideIdx);
 }
 
 function setupSlideShowArrows() {
@@ -41,19 +49,28 @@ function setupSlideShowArrows() {
     // for each marker, it should be able to be pressed to go onto it
 
     // also add zoom to slideshow picture?
-    const content = document.getElementById("content");
+    const slidesContainer = document.getElementById("slidesContainer");
+    console.log(slidesContainer);
 
     // create the left and right buttons
     const leftBtn = document.createElement("button");
     leftBtn.classList.add("display-left");
-    leftBtn.addEventListener("click", plusDivs(-1));
+    leftBtn.id = "leftBtn";
+    leftBtn.innerHTML = "&#10094;";
+
 
     const rightBtn = document.createElement("button");
     rightBtn.classList.add("display-right");
-    rightBtn.addEventListener("click", plusDivs(1));
+    rightBtn.id = "rightBtn";
+    rightBtn.innerHTML = "&#10095;";
 
-    content.appendChild(leftBtn);
-    content.appendChild(rightBtn);
+    // console.log(leftBtn);
+    leftBtn.addEventListener("click", plusDivs(-1), false);
+    rightBtn.addEventListener("click", plusDivs(1), false);
+    slidesContainer.appendChild(leftBtn);
+    slidesContainer.appendChild(rightBtn);
+
+    
 }
 
 function showImg(n) {
