@@ -32,14 +32,17 @@ function createSlideShowImgs() {
 }
 
 function plusDivs(n) {
-    // if (n.target.id == "leftBtn") {
-    //     console.log("left button pressed");
-    // }else if(n.target.id == 'rightBtn') {
-    //     console.log("right button pressed.");
-    // }
-    console.log("button pressed, ",slideIdx, n);
-    showImg(slideIdx += n);
-    console.log(slideIdx);
+    if (n.target.id == "leftBtn") {
+        // console.log("left button pressed");
+        slideIdx -= 1;
+    }else if(n.target.id == 'rightBtn') {
+        // console.log("right button pressed.");
+        slideIdx += 1;
+    }
+    // console.log("button pressed, ",slideIdx, n);
+    // showImg(slideIdx += n);
+    showImg(slideIdx);
+    // console.log(slideIdx);
 }
 
 function setupSlideShowArrows() {
@@ -65,8 +68,8 @@ function setupSlideShowArrows() {
     rightBtn.innerHTML = "&#10095;";
 
     // console.log(leftBtn);
-    leftBtn.addEventListener("click", plusDivs(-1), false);
-    rightBtn.addEventListener("click", plusDivs(1), false);
+    leftBtn.addEventListener("click", plusDivs, false);
+    rightBtn.addEventListener("click", plusDivs, false);
     slidesContainer.appendChild(leftBtn);
     slidesContainer.appendChild(rightBtn);
 
